@@ -13,11 +13,11 @@ import com.spring.model.Player;
 @Service
 public class PlayerServiceImpl implements PlayerService {
 
+	@Autowired
 	private PlayerDAO playerDao;
 	
-	@Autowired
-	public PlayerServiceImpl(PlayerDAO playerDao) {
-		this.playerDao = playerDao;
+	
+	public PlayerServiceImpl() {
 	}
 
 	@Override
