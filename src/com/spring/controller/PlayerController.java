@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.spring.model.Player;
 import com.spring.service.PlayerService;
@@ -50,9 +51,9 @@ public class PlayerController {
 	
 	//http://localhost:8080/Player/fifa/showplayer
 	@GetMapping("/showplayer")
-	public String showPlayer(int id) {
+	public String showPlayer(@RequestParam("playerId")int id,Model model) {
 		Player p = playerService.showPlayer(id);
+		model.addAttribute("player",p);
 		return "addPlayer";
 	}
-	
 }
