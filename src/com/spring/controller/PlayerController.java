@@ -48,4 +48,11 @@ public class PlayerController {
 		return "redirect:/fifa/players";
 	}
 	
+	//http://localhost:8080/Player/fifa/showplayer
+	@GetMapping("/showplayer")
+	public String showPlayer(int id) {
+		Player p = playerService.showPlayer(id);
+		return "addPlayer";
+	}
+	
 }
