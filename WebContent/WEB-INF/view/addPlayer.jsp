@@ -11,23 +11,23 @@
 </head>
 <body>
 
-<fo:form action="">
+<fo:form action="" modelAttribute="player">
 	  <div class="form-row">
 	    <div class="form-group col-md-6">
 	      <label>Name</label>
-	      <fo:input path="" class="form-control" placeholder="Name" />
+	      <fo:input path="name" class="form-control" placeholder="Name" />
 	    </div>
 	    <div class="form-group col-md-6">
 	      <label>Number</label>
-	      <fo:input path="" class="form-control" placeholder="Number"/>
+	      <fo:input path="number" class="form-control" placeholder="Number"/>
 	    </div>
 	    <div class="form-group col-md-12">
 		    <label for="inputAddress">Address</label>
-		    <fo:input path="" class="form-control"  placeholder="Address"/>
+		    <fo:input path="address" class="form-control"  placeholder="Address"/>
 		  </div>
 		<div class="form-group  col-md-12">
 		    <label for="inputAddress2">Phone</label>
-		    <fo:input path="" class="form-control" id="inputAddress2" placeholder="Phone Number"/>
+		    <fo:input path="phone" class="form-control" id="inputAddress2" placeholder="Phone Number"/>
 		  </div>
 	  </div>
 	  <button type="submit" class="btn btn-primary">Add !</button>

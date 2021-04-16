@@ -32,4 +32,11 @@ public class PlayerController {
 		return "fifa-players";
 	}
 	
+	//http://localhost:8080/Player/fifa/add
+	@GetMapping("/add")
+	public String savePage(Model model) {
+		model.addAttribute("player",new Player());
+		return "addPlayer";
+	}
+	
 }
