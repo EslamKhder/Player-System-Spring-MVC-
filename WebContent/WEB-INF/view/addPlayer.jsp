@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<fo:form action="" modelAttribute="player">
+<fo:form action="savePayer" modelAttribute="player" method="GET">
 	  <div class="form-row">
 	    <div class="form-group col-md-6">
 	      <label>Name</label>

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.spring.model.Player;
@@ -37,6 +38,13 @@ public class PlayerController {
 	public String savePage(Model model) {
 		model.addAttribute("player",new Player());
 		return "addPlayer";
+	}
+	
+	//http://localhost:8080/Player/fifa/savePayer
+	@GetMapping("/savePayer")
+	public String addUser(@ModelAttribute("player") Player player) {
+		playerService.savePlayer(player);
+		return "redirect:/fifa/players";
 	}
 	
 }
