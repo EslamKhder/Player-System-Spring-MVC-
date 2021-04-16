@@ -13,6 +13,7 @@
 
 <fo:form action="savePayer" modelAttribute="player">
 	  <div class="form-row">
+	     <fo:hidden path="id" />
 	    <div class="form-group col-md-6">
 	      <label>Name</label>
 	      <fo:input path="name" class="form-control" placeholder="Name" />
@@ -30,7 +31,7 @@
 		    <fo:input path="phone" class="form-control" id="inputAddress2" placeholder="Phone Number"/>
 		  </div>
 	  </div>
-	  <button type="submit" class="btn btn-primary">Add !</button>
+	  <button type="submit" class="btn btn-primary">Done !</button>
 </fo:form>
 </body>
 </html>

@@ -28,8 +28,11 @@
 		    <td>${player.address}</td>
 		    <td>${player.phone}</td>
 	      <td>
-	      <button type="button" class="btn btn-primary">edit</button>
-	      <button type="button" class="btn btn-danger">delete</button>
+	      <c:url var="editPlayer" value="/fifa/showplayer">
+	      	<c:param name="playerId" value="${player.id}"></c:param>
+	      </c:url>
+	      <a href="${editPlayer}" type="button" class="btn btn-primary">edit</a>
+	      <a type="button" class="btn btn-danger">delete</a>
 	      </td>
 	    </tr>
 	    </c:forEach>
