@@ -48,5 +48,16 @@ public class PlayerDaoImpl implements PlayerDAO {
 		
 		return session.get(Player.class, id);
 	}
+
+
+	@Override
+	public void removePlayer(int id) {
+		Session session = sessionFactory.getCurrentSession();
+		Query q = session.createQuery("delete from Player where id=?");
+		q.setInteger(1, id);
+		
+		q.executeUpdate();
+		
+	}
 	
 }
