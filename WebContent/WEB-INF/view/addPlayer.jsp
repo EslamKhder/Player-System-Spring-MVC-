@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="fo" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,26 +11,26 @@
 </head>
 <body>
 
-<form>
+<fo:form action="">
 	  <div class="form-row">
 	    <div class="form-group col-md-6">
 	      <label>Name</label>
-	      <input type="text" class="form-control" placeholder="Name">
+	      <fo:input path="" class="form-control" placeholder="Name" />
 	    </div>
 	    <div class="form-group col-md-6">
 	      <label>Number</label>
-	      <input type="text" class="form-control" placeholder="Number">
+	      <fo:input path="" class="form-control" placeholder="Number"/>
 	    </div>
 	    <div class="form-group col-md-12">
 		    <label for="inputAddress">Address</label>
-		    <input type="text" class="form-control"  placeholder="Address">
+		    <fo:input path="" class="form-control"  placeholder="Address"/>
 		  </div>
 		<div class="form-group  col-md-12">
 		    <label for="inputAddress2">Phone</label>
-		    <input type="text" class="form-control" id="inputAddress2" placeholder="Phone Number">
+		    <fo:input path="" class="form-control" id="inputAddress2" placeholder="Phone Number"/>
 		  </div>
 	  </div>
 	  <button type="submit" class="btn btn-primary">Add !</button>
-	</form>
+</fo:form>
 </body>
 </html>
