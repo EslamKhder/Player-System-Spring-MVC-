@@ -26,4 +26,9 @@ public class PlayerServiceImpl implements PlayerService {
 		return playerDao.getPlayers();
 	}
 
+	@Override
+	public void savePlayer(Player player) {
+		playerDao.addPlayers(player);
+	}
+
 }

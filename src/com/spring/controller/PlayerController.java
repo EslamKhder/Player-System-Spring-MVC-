@@ -32,5 +32,4 @@ public class PlayerController {
 		return "fifa-players";
 	}
 	
-	
 }
