@@ -32,4 +32,9 @@ public class PlayerServiceImpl implements PlayerService {
 		playerDao.addPlayers(player);
 	}
 
+	@Override
+	public Player showPlayer(int id) {
+		return playerDao.getPlayer(id);
+	}
+
 }
